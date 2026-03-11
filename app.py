@@ -30,7 +30,7 @@ if st.button("Analyze Link"):
 
                 # Configure AI
                 genai.configure(api_key=api_key)
-                model = genai.GenerativeModel('gemini-1.5-flash')
+                model = genai.GenerativeModel('gemini-2.5-flash')
 
                 # Strict SOP Prompt
                 prompt = f"""
@@ -53,4 +53,5 @@ if st.button("Analyze Link"):
                 st.button("Done", on_click=lambda: st.success("Audit Reviewed!"))
 
             except Exception as e:
+
                 st.error(f"Error: {e}")
